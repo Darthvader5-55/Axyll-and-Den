@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a20">
+  <meta name="description" content="A special announcement from Axyll & Den — a beautiful new chapter begins.">
+  <meta property="og:title" content="Axyll & Den | The Announcement">
+  <meta property="og:description" content="A special announcement. A beautiful new chapter.">
+  <title>Axyll & Den — A New Chapter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="intro-active">
+  <div class="grain" aria-hidden="true"></div>
+  <div id="intro" class="intro" role="dialog" aria-modal="true" aria-label="Wedding announcement introduction">
+    <div class="intro-glow" aria-hidden="true"></div>
+    <div class="intro-inner">
+      <div class="intro-mark" aria-hidden="true">A <span>&</span> D</div>
+      <p class="eyebrow intro-caption">A SPECIAL ANNOUNCEMENT</p>
+      <h1 class="intro-title">Every story<br>has a <em>new chapter.</em></h1>
+      <p class="intro-names">AXYLL <span>✦</span> DEN</p>
+      <div class="intro-progress" aria-label="Five-second introduction"><span></span></div>
+      <button class="text-btn intro-skip" id="skipIntro" type="button">Skip intro <span aria-hidden="true">↗</span></button>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Axyll and Den, back to top">Axyll <span>&</span> Den<span class="brand-star">✦</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#story">Our story</a><a href="#memo">The memo</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle appearance">☼</button>
+      <button class="outline-btn" id="replayIntro" type="button">↺ <span>Replay intro</span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+        <span class="float-spark spark-a">✦</span><span class="float-spark spark-b">✧</span><span class="float-spark spark-c">✳</span>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow rise">EST. IN LOVE · FOREVER IN THE MAKING</p>
+        <h2 id="heroTitle" class="hero-title rise">The beginning<br>of <em>our forever.</em></h2>
+        <p class="hero-description rise">Some moments are too beautiful to keep to ourselves. We have something special to share.</p>
+        <div class="hero-buttons rise"><a class="primary-btn" href="#memo">Read our announcement <span aria-hidden="true">↗</span></a><a class="secondary-link" href="#story">Explore our story <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="hero-card-wrap" data-tilt>
+        <div class="hero-card">
+          <div class="card-shimmer"></div>
+          <div class="card-top"><span>THE ANNOUNCEMENT</span><span>01 / ∞</span></div>
+          <div class="card-symbol" aria-hidden="true"><span>A</span><b>&</b><span>D</span></div>
+          <div class="card-bottom"><p>Two hearts, one journey.</p><strong>Axyll & Den</strong><span>THE NEXT CHAPTER AWAITS</span></div>
+        </div>
+      </div>
+      <a class="scroll-note" href="#story"><span class="scroll-line"></span> SCROLL TO DISCOVER</a>
+    </section>
+
+    <section class="story section" id="story" aria-labelledby="storyTitle">
+      <div class="section-heading reveal"><span class="section-kicker">01 — A NEW BEGINNING</span><h2 id="storyTitle">The best is <em>yet to come.</em></h2><p>We have shared memories, laughter, and dreams. Now, we are ready to start a beautiful new chapter together.</p></div>
+      <div class="story-grid">
+        <article class="story-panel reveal"><span class="panel-no">I.</span><span class="panel-icon" aria-hidden="true">✧</span><h3>Our moment</h3><p>One simple announcement. A lifetime of memories waiting to be made.</p></article>
+        <article class="story-panel featured reveal"><span class="panel-no">II.</span><span class="panel-icon" aria-hidden="true">♡</span><h3>Our promise</h3><p>With gratitude and joy, we are choosing this next adventure together.</p></article>
+        <article class="story-panel reveal"><span class="panel-no">III.</span><span class="panel-icon" aria-hidden="true">✦</span><h3>Our people</h3><p>To everyone who has supported us, thank you for being part of our story.</p></article>
+      </div>
+    </section>
+
+    <section class="announcement section" id="memo" aria-labelledby="memoTitle">
+      <div class="announcement-orb" aria-hidden="true"></div>
+      <div class="section-heading reveal"><span class="section-kicker">02 — THE OFFICIAL ANNOUNCEMENT</span><h2 id="memoTitle">A note from <em>us to you.</em></h2><p>A marriage memorandum, made with love. Tap the envelope to open our special announcement.</p></div>
+      <div class="letter-scene reveal">
+        <button id="envelope" class="envelope" type="button" aria-expanded="false" aria-controls="letterPanel" aria-label="Open our marriage memorandum">
+          <span class="envelope-back"></span><span class="envelope-note">A <i>&</i> D</span><span class="envelope-fold"></span><span class="envelope-seal">✦</span>
+          <span class="envelope-prompt" id="envelopePrompt">TAP TO OPEN</span>
+        </button>
+        <div id="letterPanel" class="letter-panel" hidden>
+          <div class="letter-toolbar"><span>OUR MARRIAGE MEMORANDUM</span><div><button id="copyMemo" class="small-btn" type="button">Copy text</button><a href="marriage-memorandum.png" download="Axyll-and-Den-Marriage-Memorandum.png" class="small-btn">Save image ↗</a></div></div>
+          <img class="memo-image" src="assets/marriage-memorandum.png" alt="Marriage Memorandum from Axyll and Den to their family and friends, announcing they are getting married and expressing gratitude for the love and support received." loading="lazy" width="1122" height="1402">
+          <p class="memo-caption">With love, Axyll & Den ♡</p>
+        </div>
+        <p id="toast" class="toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="final-section section" aria-labelledby="closingTitle">
+      <div class="closing-decoration" aria-hidden="true">✦</div><span class="section-kicker reveal">WITH LOVE, ALWAYS</span><h2 class="reveal" id="closingTitle">Here's to <em>what's next.</em></h2><p class="reveal">Thank you for being part of our journey. More details about our special day will be shared soon.</p><button id="celebrate" class="primary-btn celebrate-btn reveal" type="button">Celebrate with us <span aria-hidden="true">✦</span></button>
+      <div class="signature reveal">Axyll <span>&</span> Den</div>
+    </section>
+  </main>
+  <footer><span>© <span id="year">2026</span> Axyll & Den</span><span>MADE FOR A BEAUTIFUL NEW CHAPTER ✦</span><a href="#top">Back to top ↑</a></footer>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <noscript><style>.intro{display:none}.intro-active{overflow:auto}.reveal{opacity:1;transform:none}</style><p class="noscript-note">JavaScript is disabled. The announcement image is still available below.</p><p class="noscript-note"><a href="assets/marriage-memorandum.png">View our marriage memorandum</a></p></noscript>
+</body>
+</html>
