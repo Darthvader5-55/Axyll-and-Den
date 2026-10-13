@@ -12,7 +12,7 @@
   <script src="script.js" defer></script>
 </head>
 <body class="intro-active">
-  <div class="grain" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div><div class="ambient-decoration" aria-hidden="true"><span>✿</span><span>✧</span><span>♡</span><span>✦</span></div><div class="floating-notes" id="floatingNotes" aria-hidden="true"></div>
   <div id="intro" class="intro" role="dialog" aria-modal="true" aria-label="Wedding announcement introduction">
     <div class="intro-glow" aria-hidden="true"></div>
     <div class="intro-inner">
@@ -28,10 +28,10 @@
   <header class="site-header" id="top">
     <a class="brand" href="#home" aria-label="Axyll and Den, back to top">Axyll <span>&</span> Den<span class="brand-star">✦</span></a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#story">Our story</a><a href="#memo">The memo</a>
+      <a href="#story">Our story</a><a href="#experience">Explore</a><a href="#memo">The memo</a><a href="#wishes">Wishes</a>
     </nav>
     <div class="header-actions">
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle appearance">☼</button>
+      <button class="icon-btn" id="soundToggle" type="button" aria-label="Play ambient music" title="Toggle music">♫</button><button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle appearance">☼</button>
       <button class="outline-btn" id="replayIntro" type="button">↺ <span>Replay intro</span></button>
     </div>
   </header>
@@ -86,9 +86,40 @@
       </div>
     </section>
 
+
+<section class="experience section" id="experience" aria-labelledby="experienceTitle">
+  <div class="section-heading reveal"><span class="section-kicker">03 — TWO WORLDS, ONE FOREVER</span><h2 id="experienceTitle">His midnight. <em>Her sunrise.</em></h2><p>Discover interactive little chapters of Axyll & Den. Every card holds a surprise.</p></div>
+  <div class="couple-grid">
+    <button class="couple-card her reveal" data-flip aria-pressed="false"><span class="couple-label">HER WORLD · AXYLL</span><span class="couple-glyph">✿</span><strong>Soft as a dream</strong><span class="couple-front">Tap to reveal a note ↗</span><span class="couple-back">May our days be filled with kindness, laughter and joy.</span></button>
+    <button class="couple-card his reveal" data-flip aria-pressed="false"><span class="couple-label">HIS WORLD · DEN</span><span class="couple-glyph">✦</span><strong>Steady as the stars</strong><span class="couple-front">Tap to reveal a note ↗</span><span class="couple-back">Here's to making room for every dream we share.</span></button>
+  </div>
+  <div class="interaction-grid">
+    <article class="feature-card reveal"><span class="eyebrow">A LITTLE MAGIC</span><h3>Our golden rings</h3><div class="ring-stage" id="ringStage"><div class="ring ring-a"></div><div class="ring ring-b"></div></div><button type="button" class="small-btn" id="ringsBtn">Bring the rings together ✦</button><p class="feature-feedback" id="ringsMsg">Two stories, one beautiful journey.</p></article>
+    <article class="feature-card reveal"><span class="eyebrow">JUST FOR YOU</span><h3>Your personal greeting</h3><label for="guestName">What should we call you?</label><div class="input-row"><input id="guestName" maxlength="40" placeholder="Your first name"><button id="greetBtn" class="small-btn">Reveal</button></div><p class="greeting" id="greetResult">Dear friend, we're glad you're here. ♡</p></article>
+    <article class="feature-card reveal"><span class="eyebrow">UNDER THE STARS</span><h3>Love constellation</h3><div class="stars" id="stars" role="group" aria-label="Connect the stars"><button data-star="0" aria-label="Star one">✦</button><button data-star="1" aria-label="Star two">✧</button><button data-star="2" aria-label="Star three">✦</button><button data-star="3" aria-label="Star four">✧</button><div class="stars-line"></div></div><p id="starMessage">Tap all four stars to reveal a constellation.</p></article>
+    <article class="feature-card reveal"><span class="eyebrow">A KEEPSAKE</span><h3>Build a bouquet</h3><div class="bouquet-display" id="bouquetDisplay" aria-live="polite">♧</div><div class="flower-choices"><button data-flower="🌷" aria-label="Add tulip">🌷</button><button data-flower="🌹" aria-label="Add rose">🌹</button><button data-flower="🌼" aria-label="Add daisy">🌼</button><button data-flower="🌸" aria-label="Add blossom">🌸</button></div><button class="small-btn" id="clearBouquet">Start again</button></article>
+  </div>
+</section>
+<section class="chapter-section section" aria-labelledby="chaptersTitle"><div class="section-heading reveal"><span class="section-kicker">04 — SMALL STORIES, BIG FEELINGS</span><h2 id="chaptersTitle">A little book <em>of moments.</em></h2><p>Explore the pages and surprises, one at a time.</p></div>
+  <div class="book-and-scratch">
+    <div class="book-area reveal"><div class="memory-book" id="memoryBook"><span class="book-label">THE MEMORY BOOK · <span id="pageNum">01</span> / 04</span><div class="memory-art" id="memoryArt">✦</div><h3 id="memoryTitle">A new chapter</h3><p id="memoryBody">Every wonderful story has a beginning.</p></div><div class="book-controls"><button class="small-btn" id="prevPage">← Previous</button><button class="small-btn" id="nextPage">Next page →</button></div></div>
+    <div class="scratch-wrap reveal"><h3>Scratch to reveal</h3><p>Rub the gold panel with your finger or mouse.</p><div class="scratch-surface"><div class="scratch-message"><span>THE SECRET</span><strong>We're getting married!</strong><span>AXYLL ♡ DEN</span></div><canvas id="scratchCanvas" width="540" height="290" aria-label="Scratch away the golden cover to reveal our announcement"></canvas></div><button id="revealScratch" class="small-btn">Reveal without scratching</button></div>
+  </div>
+  <div class="timeline reveal"><div><span>CHAPTER I</span><strong>The beginning</strong><p>Every story starts somewhere.</p></div><div><span>CHAPTER II</span><strong>Growing together</strong><p>The little things become our favorite moments.</p></div><div><span>CHAPTER III</span><strong>A promise</strong><p>Choosing the next chapter with love.</p></div><div><span>CHAPTER IV</span><strong>Our forever</strong><p>And the story continues.</p></div></div>
+</section>
+<section class="wonder-section section" aria-labelledby="wonderTitle"><div class="section-heading reveal"><span class="section-kicker">05 — FIND YOUR SURPRISE</span><h2 id="wonderTitle">The magic <em>is in the details.</em></h2><p>Tap, flip and explore. Some surprises are hidden in plain sight.</p></div>
+  <div class="wonder-grid">
+    <article class="feature-card reveal"><h3>Our Polaroid wall</h3><div class="polaroid-wall"><button class="polaroid" data-note="The sweetest stories are the ones we keep writing."><span class="polaroid-image">♡</span>Little moments</button><button class="polaroid" data-note="Our favorite adventure is the next one."><span class="polaroid-image">✦</span>Big dreams</button><button class="polaroid" data-note="Thank you for being part of this chapter."><span class="polaroid-image">✿</span>With love</button></div><p>Tap a photo to reveal a message. Real photos can be added later.</p></article>
+    <article class="feature-card reveal"><h3>The wish jar</h3><button class="jar" id="wishJar" aria-label="Open a message from the wish jar">✧<span>OPEN A WISH</span></button><p class="feature-feedback" id="jarMessage">A kind thought is waiting inside.</p></article>
+    <article class="feature-card reveal"><h3>A little gift</h3><button class="gift" id="giftBtn" aria-label="Open gift box"><span class="gift-lid"></span><span class="gift-body">✦</span></button><p class="feature-feedback" id="giftMessage">Tap to unwrap your surprise!</p></article>
+    <article class="feature-card reveal"><h3>Hidden love notes</h3><div class="notes-buttons"><button data-hidden-note="Love grows in the everyday moments.">♡</button><button data-hidden-note="Good things feel sweeter when shared.">✧</button><button data-hidden-note="The best memories are still ahead.">✿</button></div><p class="feature-feedback" id="hiddenNote">Choose a symbol to open a note.</p><button class="secret-heart" id="secretHeart" title="A tiny surprise" aria-label="Secret golden heart">♥</button></article>
+  </div>
+  <div class="curtain-area reveal"><h3>One more reveal...</h3><p>Swipe the curtain aside or tap the button.</p><div class="curtain-stage" id="curtainStage"><div class="curtain-under">Forever looks lovely on us. ♡</div><div class="curtain curtain-left"></div><div class="curtain curtain-right"></div></div><button class="small-btn" id="curtainBtn">Open the curtain ↗</button></div>
+</section>
+<section class="wishes-section section" id="wishes" aria-labelledby="wishesTitle"><div class="section-heading reveal"><span class="section-kicker">06 — WORDS THAT STAY</span><h2 id="wishesTitle">Leave us <em>a little love.</em></h2><p>Share a thoughtful message. Notes are saved in this browser only, not publicly shared across guests.</p></div><form id="wishesForm" class="wish-form reveal"><label for="wishFrom">Your name</label><input id="wishFrom" required maxlength="45" placeholder="From a friend"><label for="wishText">Your message</label><textarea id="wishText" required maxlength="250" rows="3" placeholder="Sending you both so much happiness..."></textarea><button class="primary-btn" type="submit">Add your wish ♡</button></form><div id="wishesList" class="wishes-list" aria-live="polite"></div></section>
     <section class="final-section section" aria-labelledby="closingTitle">
       <div class="closing-decoration" aria-hidden="true">✦</div><span class="section-kicker reveal">WITH LOVE, ALWAYS</span><h2 class="reveal" id="closingTitle">Here's to <em>what's next.</em></h2><p class="reveal">Thank you for being part of our journey. More details about our special day will be shared soon.</p><button id="celebrate" class="primary-btn celebrate-btn reveal" type="button">Celebrate with us <span aria-hidden="true">✦</span></button>
-      <div class="signature reveal">Axyll <span>&</span> Den</div>
+      <div class="ending-bubbles" aria-hidden="true"><span>♡</span><span>✦</span><span>✧</span></div><div class="signature reveal">Axyll <span>&</span> Den</div>
     </section>
   </main>
   <footer><span>© <span id="year">2026</span> Axyll & Den</span><span>MADE FOR A BEAUTIFUL NEW CHAPTER ✦</span><a href="#top">Back to top ↑</a></footer>
