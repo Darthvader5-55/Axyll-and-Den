@@ -1,23 +1,18 @@
-# Axyll & Den — A New Chapter
+# Axyll & Den — The Eternal Chapter
 
-A responsive wedding-announcement website with a five-second intro, a 3D-style animated card, floating designs, an interactive envelope that reveals the marriage memorandum, a theme switcher, and a celebration effect.
+GitHub Pages-compatible interactive wedding announcement. No build step or server required.
 
-## How to use
+## Publishing
+1. Create a public GitHub repository.
+2. Upload **all five files in this folder** to the repository root (`index.html`, `styles.css`, `script.js`, `marriage-memorandum.png`, `README.md`). No `assets` folder required.
+3. In Settings → Pages, select Deploy from a branch → main → /(root), then Save.
+4. Visit `https://USERNAME.github.io/REPO/` when deployment finishes.
 
-1. Open `index.html` in your browser for a local preview.
-2. To publish with **GitHub Pages**, create a public GitHub repository, upload `index.html`, `styles.css`, `script.js`, and the `assets` folder to the repository root, and commit.
-3. In your GitHub repository, open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, then `main` and `/(root)` and save.
-4. Wait for GitHub to display the published URL, usually `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
+## Interactions
+5-second skippable/replayable intro, dual His & Hers themes, CSS 3D rings, letter-opening memorandum, story timeline, hidden love notes, scratch card, page-turning memory book, constellation, personalized greeting, bouquet, wish jar, local guest wishes, gift box, polaroids, swipe reveal, secret heart, cinematic ending, confetti and opt-in synthesized melody.
 
-## Customize
+## Privacy and limits
+Guest wishes are saved **only in each visitor's browser** using localStorage; they are not shared across devices. A public shared wall requires a backend/service. No real wedding date, venue or relationship facts have been invented. Memory-book artwork and polaroids are decorative placeholders, not personal photographs. Audio is synthesized by Web Audio API after user activation, not a licensed music file.
 
-- Edit the names and paragraphs in `index.html`.
-- Update the memo image in `assets/marriage-memorandum.png` and the text copy in `script.js` if the announcement details change.
-- Change colors through variables at the top of `styles.css`.
-- The intro runs for **5 seconds** by default (and can be skipped or replayed). Reduced-motion preference shortens the intro.
-- Fonts load from Google Fonts; the site has system-font fallbacks if offline.
-- No frameworks, API keys, accounts, build steps, or backend required.
-
-## Notes
-
-The memo includes the date October 13, 2026, which is the **announcement date**, not a confirmed wedding date. No ceremony date or venue was invented.
+## Maintenance
+All references to the memorandum use `marriage-memorandum.png` relative to `index.html`. Keep filenames identical (GitHub filenames are case-sensitive). The site is responsive and respects reduced-motion preferences for major motion effects.
